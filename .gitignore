@@ -1,0 +1,11 @@
+target
+idea
+.idea
+
+**/*.ipr
+**/*.iws
+/*.iml
+.DS_Store
+.gradle
+build
+idea-sandbox

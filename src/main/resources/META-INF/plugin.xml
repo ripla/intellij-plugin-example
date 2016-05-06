@@ -1,0 +1,18 @@
+<idea-plugin version="2">
+    <id>org.vaadin.example</id>
+    <name>Example plugin</name>
+
+    <description>Some example plugin</description>
+
+    <idea-version since-build="141"/>
+
+    <depends>com.intellij.modules.java</depends>
+
+    <application-components>
+        <component>
+            <implementation-class>
+                org.vaadin.example.ExampleComponent
+            </implementation-class>
+        </component>
+    </application-components>
+</idea-plugin>

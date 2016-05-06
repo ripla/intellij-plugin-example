@@ -1,0 +1,32 @@
+plugins {
+    id "org.jetbrains.intellij" version "0.0.43"
+    id 'idea'
+    id 'java'
+}
+
+group = 'org.vaadin.example'
+version = '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
+intellij {
+    /*
+     * Switch these to test with different IntelliJ versions with e.g.
+     * 'gradle runIdea -Pic-15'
+     * For version 2016 onwards JDK 8 needs to be used
+     */
+    if (project.hasProperty('ic-2016')) {
+        version = 'IC-2016.1'
+
+    } else if (project.hasProperty('ic-15')) {
+        version = 'IC-15.0.5'
+
+    } else {
+        version = 'IC-14.1.6'
+    }
+
+    pluginName = 'vaadin-plugin-example'
+
+    sandboxDirectory = 'idea-sandbox'
+}
